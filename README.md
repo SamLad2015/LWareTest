@@ -1,5 +1,8 @@
 # LWareTest
 
+Once the complete code is downloaded then the project should launch both Api and Client on the same port (First Load may take some time!) but please refer the instructions below in case of any issues:
+
+
 Api Server 
 
 Possible hurdles:
