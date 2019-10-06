@@ -1,0 +1,22 @@
+<div class="row rover-control">
+  <div class="col-sm-12">
+    <div *ngIf="isNotDirectional; else dvDirection">
+        <span>Distance: </span><input [(ngModel)]="roverCommand.distance"  required min="1" type="number">
+    </div>
+
+    <ng-template #dvDirection>
+      <div>
+      <span class="glyphicon"
+            [class.glyphicon-arrow-left]="roverCommand.direction === 'L'"
+            [class.glyphicon-arrow-right]="roverCommand.direction === 'R'">
+      </span>
+        <span *ngIf="roverCommand.direction === 'L'">
+        Left
+      </span>
+        <span *ngIf="roverCommand.direction === 'R'">
+        Right
+      </span>
+      </div>
+    </ng-template>
+  </div>
+</div>

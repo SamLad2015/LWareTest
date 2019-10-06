@@ -1,0 +1,57 @@
+<div class='main-nav'>
+      <div class='navbar navbar-inverse'>
+        <div class='navbar-header'>
+            <span class='navbar-brand'>LWareTest</span>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <li>
+                  <a href="#"><span class='glyphicon glyphicon-home'></span> Rover Controls</a>
+                </li>
+            </ul>
+        </div>
+      <div>
+        <div class='row main-controls'>
+          <div class='col-sm-2'></div>
+          <div class='col-sm-8'>
+            <div class="row control-row col-sm-12 command-row" *ngFor="let command of commands">
+              <div class="col-sm-10">
+                <rover-control [roverCommand]="command"></rover-control>
+              </div>
+              <div class="col-sm-2">
+                <button (click)="removeCommand(command)" class="glyphicon glyphicon-remove"></button>
+              </div>
+            </div>
+          </div>
+          <div class='col-sm-2'></div>
+        </div>
+        <div class='row text-center'>
+            <div class='col-sm-4'>
+              <button class="btn btn-primary glyphicon glyphicon-arrow-left" (click)="addControl('L')" [disabled]="commands.length > 4"><span>Turn Left</span></button>
+            </div>
+            <div class='col-sm-4'>
+              <button class="btn btn-primary glyphicon glyphicon-arrow-up" (click)="addControl('F')" [disabled]="commands.length > 4"><span>Move Forward</span></button>
+            </div>
+            <div class='col-sm-4'>
+              <button class="btn btn-primary glyphicon glyphicon-arrow-right" (click)="addControl('R')" [disabled]="commands.length > 4"><span>Turn Right</span></button>
+            </div>
+        </div>
+        <div class='row main-controls'>
+            <div class='col-sm-2 text-center'></div>
+            <div class='col-sm-8 text-center'>
+              <button class="btn btn-block" (click)="sendCommands()" [disabled]="!commands || commands.length === 0"><span>Send Commands</span></button>
+            </div>
+            <div class='col-sm-2 text-center'></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 rover-status">
+            {{roverUpdateStatus}}
+          </div>
+          <div class="col-sm-12 rover-status-error">
+            {{roverUpdateError}}
+          </div>
+        </div>
+      </div>
+ </div>
+</div>

@@ -1,0 +1,89 @@
+li .glyphicon {
+    margin-right: 10px;
+}
+
+/* Highlighting rules for nav menu items */
+li.link-active a,
+li.link-active a:hover,
+li.link-active a:focus {
+    background-color: #4189C7;
+    color: white;
+}
+
+/* Keep the nav menu independent of scrolling and on top of other items */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    /* On small screens, convert the nav menu to a vertical sidebar */
+    .main-nav {
+        height: 100%;
+        width: 50%;
+    }
+    .navbar {
+        border-radius: 0px;
+        border-width: 0px;
+        height: 100%;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-collapse {
+        border-top: 1px solid #444;
+        padding: 0px;
+    }
+    .navbar ul {
+        float: none;
+    }
+    .navbar li {
+        float: none;
+        font-size: 15px;
+        margin: 6px;
+    }
+    .navbar li a {
+        padding: 10px 16px;
+        border-radius: 4px;
+    }
+    .navbar a {
+        /* If a menu item's text is too long, truncate it */
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.btn span {
+  padding-left: 7px;
+}
+
+.row.main-controls {
+  margin: 35px 0;
+}
+
+.command-row {
+  margin-bottom: 7px;
+}
+
+.control-row {
+  background: #ffffff;
+}
+
+.control-row div {
+  padding: 7px 5px;
+}
+
+.rover-status, .rover-status-error {
+  color: lawngreen;
+  font-weight: bold;
+  text-align: center;
+}
+
+.rover-status-error {
+  color: red;
+}
