@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using LWareTest.Interfaces;
 using LWareTest.Models;
 using LWareTest.Services;
@@ -29,7 +31,7 @@ namespace LWareTest.Controllers
             {
                 return BadRequest(ModelState);
             }
-            _roverService.UpdatePosition(commands);
+            _roverService.UpdatePosition(String.Join(",", commands));
 
             return Ok();
         }

@@ -30,9 +30,14 @@ namespace LWareTest.Services
             return currentPosition;
         }
 
-        public void UpdatePosition(string[] commands)
+        public void UpdatePosition(string commands)
         {
-            foreach (var command in commands)
+            if (RoverCurrentPosition.CurrentDirection == 0)
+            {
+                SetInitialPosition();
+            }
+            var roverCommands = commands.Split(",");
+            foreach (var command in roverCommands)
             {
                 int n;
                 if (int.TryParse(command, out n))
@@ -47,6 +52,14 @@ namespace LWareTest.Services
                     TurnTo(Helpers.EnumHelper.ToEnum<Turns>(command));
                 }
             }
+        }
+        
+        public void SetInitialPosition()
+        {
+            RoverCurrentPosition.CurrentDirection = Directions.South;
+            RoverCurrentPosition.XPosition = 1;
+            RoverCurrentPosition.YPosition = 0;
+            RoverCurrentPosition.CurrentDirectionValue = Directions.South.ToString();
         }
 
         private void MoveBy(int distance)
@@ -87,12 +100,5 @@ namespace LWareTest.Services
             }
         }
 
-        private void SetInitialPosition()
-        {
-            RoverCurrentPosition.CurrentDirection = Directions.South;
-            RoverCurrentPosition.XPosition = 1;
-            RoverCurrentPosition.YPosition = 0;
-            RoverCurrentPosition.CurrentDirectionValue = Directions.South.ToString();
-        }
     }
 }

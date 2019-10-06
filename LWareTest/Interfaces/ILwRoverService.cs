@@ -6,6 +6,7 @@ namespace LWareTest.Interfaces
     public interface ILwRoverService
     {
         PositionDetails GetPosition();
-        void UpdatePosition(string[] command);
+        void UpdatePosition(string commands);
+        void SetInitialPosition();
     }
 }
