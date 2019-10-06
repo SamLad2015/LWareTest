@@ -14,6 +14,7 @@ Client Front End
 
 Possible hurdle:
 If you IDE is not clever to run the npm install by default when the project is launched then please run 'npm install' on the ClientApp directory
+For any timeout issue while launching the Angular App please restart the app or refesh the page.
 
 
 C# Unit tests
