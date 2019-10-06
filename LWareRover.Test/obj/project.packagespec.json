@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\Sangram.Lad\\RiderProjects\\LWareTest\\LWareRover.Test\\LWareRover.Test.csproj",
+    "projectName": "LWareRover.Test",
+    "projectPath": "C:\\Users\\Sangram.Lad\\RiderProjects\\LWareTest\\LWareRover.Test\\LWareRover.Test.csproj",
+    "outputPath": "C:\\Users\\Sangram.Lad\\RiderProjects\\LWareTest\\LWareRover.Test\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.1"
+    ],
+    "frameworks": {
+      "netcoreapp2.1": {
+        "projectReferences": {
+          "C:\\Users\\Sangram.Lad\\RiderProjects\\LWareTest\\LWareTest\\LWareTest.csproj": {
+            "projectPath": "C:\\Users\\Sangram.Lad\\RiderProjects\\LWareTest\\LWareTest\\LWareTest.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.1": {
+      "dependencies": {
+        "Microsoft.NET.Test.Sdk": {
+          "target": "Package",
+          "version": "[15.8.0, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.1.0, )",
+          "autoReferenced": true
+        },
+        "xunit": {
+          "target": "Package",
+          "version": "[2.3.1, )"
+        },
+        "xunit.runner.visualstudio": {
+          "target": "Package",
+          "version": "[2.3.1, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}
